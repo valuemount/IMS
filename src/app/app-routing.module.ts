@@ -4,8 +4,11 @@ import { DummyDashboardComponent } from './dummy/dummy-dashboard/dummy-dashboard
 import { DummyChatComponent } from './dummy/dummy-chat/dummy-chat.component';
 import { DummyFormComponent } from './dummy/dummy-form/dummy-form.component';
 import { DummyAuthenticationComponent } from './dummy/dummy-authentication/dummy-authentication.component';
+import { LoginComponent } from './modules/authentication/login/login.component';
 
 const routes: Routes = [
+
+  {path:'login',component:LoginComponent},
 
   
 
@@ -14,6 +17,7 @@ const routes: Routes = [
   {path:'dummy-dashboard', component: DummyDashboardComponent },
   {path:'dummy-form', component: DummyFormComponent },
   {path:'dummy-auth', component: DummyAuthenticationComponent },
+
 
 ];
 
