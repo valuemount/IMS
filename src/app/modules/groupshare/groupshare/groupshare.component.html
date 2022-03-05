@@ -443,7 +443,7 @@
             </div>
         </div>
 
-        <!-- <coconversation> -->
+        <!-- <coconversation body> -->
         <div class="col-sm-8 conversation">
             <div class="row heading">
                 <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
@@ -470,198 +470,22 @@
                     </div>
                 </div>
 
-                <div class="row message-body">
+                <!-- <messagebody> -->
+                <div class="row message-body" *ngFor="let post of posts">
                     <div class="col-sm-12 message-main-receiver">
                         <div class="receiver">
-                            <div class="message-text">
-                                Hi, what are you doing?! h h hh hhhhhhhhhhhhhhhhhhhhhhh h h h h h 
-                                hvhv h h h 
-                                 h h
+                            <div class="message-text" >
+                              {{post.body}}
                             </div>
 
                         </div>
-                        <span class="message-time pull-right">
-                            Sun
+                        <span class="message-time pull-right" >
+                            {{post.timestamp}}
                           </span>
                     </div>
                 </div>
 
-                <div class="row message-body">
-                    <div class="col-sm-12 message-main-receiver">
-                        <div class="receiver">
-                            <div class="message-text">
-                                Hi, what are you doing?! h h hh hhhhhhhhhhhhhhhhhhhhhhh h h h h h 
-                                hvhv h h h 
-                                 h h
-                            </div>
-
-                        </div>
-                        <span class="message-time pull-right">
-                            Sun
-                          </span>
-                    </div>
-                </div>
-
-                <div class="row message-body">
-                    <div class="col-sm-12 message-main-receiver">
-                        <div class="receiver">
-                            <div class="message-text">
-                                Hi, what are you doing?! h h hh hhhhhhhhhhhhhhhhhhhhhhh h h h h h 
-                                hvhv h h h 
-                                 h h
-                            </div>
-
-                        </div>
-                        <span class="message-time pull-right">
-                            Sun
-                          </span>
-                    </div>
-                </div>
-
-                <div class="row message-body">
-                    <div class="col-sm-12 message-main-receiver">
-                        <div class="receiver">
-                            <div class="message-text">
-                                Hi, what are you doing?! h h hh hhhhhhhhhhhhhhhhhhhhhhh h h h h h 
-                                hvhv h h h 
-                                 h h
-                            </div>
-
-                        </div>
-                        <span class="message-time pull-right">
-                            Sun
-                          </span>
-                    </div>
-                </div>
-
-                <div class="row message-body">
-                    <div class="col-sm-12 message-main-receiver">
-                        <div class="receiver">
-                            <div class="message-text">
-                                Hi, what are you doing?! h h hh hhhhhhhhhhhhhhhhhhhhhhh h h h h h 
-                                hvhv h h h 
-                                 h h
-                            </div>
-
-                        </div>
-                        <span class="message-time pull-right">
-                            Sun
-                          </span>
-                    </div>
-                </div>
-
-                <div class="row message-body">
-                    <div class="col-sm-12 message-main-receiver">
-                        <div class="receiver">
-                            <div class="message-text">
-                                Hi, what are you doing?! h h hh hhhhhhhhhhhhhhhhhhhhhhh h h h h h 
-                                hvhv h h h 
-                                 h h
-                            </div>
-
-                        </div>
-                        <span class="message-time pull-right">
-                            Sun
-                          </span>
-                    </div>
-                </div>
-
-                <div class="row message-body">
-                    <div class="col-sm-12 message-main-receiver">
-                        <div class="receiver">
-                            <div class="message-text">
-                                Hi, what are you doing?! h h hh hhhhhhhhhhhhhhhhhhhhhhh h h h h h 
-                                hvhv h h h 
-                                 h h
-                            </div>
-
-                        </div>
-                        <span class="message-time pull-right">
-                            Sun
-                          </span>
-                    </div>
-                </div>
-
-                <div class="row message-body">
-                    <div class="col-sm-12 message-main-receiver">
-                        <div class="receiver">
-                            <div class="message-text">
-                                Hi, what are you doing?! h h hh hhhhhhhhhhhhhhhhhhhhhhh h h h h h 
-                                hvhv h h h 
-                                 h h
-                            </div>
-
-                        </div>
-                        <span class="message-time pull-right">
-                            Sun
-                          </span>
-                    </div>
-                </div>
-
-                <div class="row message-body">
-                    <div class="col-sm-12 message-main-receiver">
-                        <div class="receiver">
-                            <div class="message-text">
-                                Hi, what are you doing?! h h hh hhhhhhhhhhhhhhhhhhhhhhh h h h h h 
-                                hvhv h h h 
-                                 h h
-                            </div>
-
-                        </div>
-                        <span class="message-time pull-right">
-                            Sun
-                          </span>
-                    </div>
-                </div>
-
-                <div class="row message-body">
-                    <div class="col-sm-12 message-main-receiver">
-                        <div class="receiver">
-                            <div class="message-text">
-                                Hi, what are you doing?! h h hh hhhhhhhhhhhhhhhhhhhhhhh h h h h h 
-                                hvhv h h h 
-                                 h h
-                            </div>
-
-                        </div>
-                        <span class="message-time pull-right">
-                            Sun
-                          </span>
-                    </div>
-                </div>
-
-                <div class="row message-body">
-                    <div class="col-sm-12 message-main-receiver">
-                        <div class="receiver">
-                            <div class="message-text">
-                                Hi, what are you doing?! h h hh hhhhhhhhhhhhhhhhhhhhhhh h h h h h 
-                                hvhv h h h 
-                                 h h
-                            </div>
-
-                        </div>
-                        <span class="message-time pull-right">
-                            Sun
-                          </span>
-                    </div>
-                </div>
-
-                <div class="row message-body">
-                    <div class="col-sm-12 message-main-receiver">
-                        <div class="receiver">
-                            <div class="message-text">
-                                Hi, what are you doing?! h h hh hhhhhhhhhhhhhhhhhhhhhhh h h h h h 
-                                hvhv h h h 
-                                 h h
-                            </div>
-
-                        </div>
-                        <span class="message-time pull-right">
-                            Sun
-                          </span>
-                    </div>
-                </div>
-
+                
             
                 <!-- <div class="row message-body">
                     <div class="col-sm-12 message-main-sender">
@@ -684,13 +508,13 @@
                     <i class="fa fa-smile-o fa-2x"></i>
                 </div> -->
                 <div class="col-sm-11 col-xs-10 reply-main">
-                    <textarea class="form-control" rows="1" id="comment"></textarea>
+                    <textarea class="form-control" rows="1" id="comment" [(ngModel)]="message"></textarea>
                 </div>
                 <!-- <div class="col-sm-1 col-xs-1 reply-recording">
                     <i class="fa fa-microphone fa-2x" aria-hidden="true"></i>
                 </div> -->
                 <div class="col-sm-1 col-xs-2 reply-send">
-                    <i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-paper-plane fa-2x" aria-hidden="true" (click)="enter()"></i>
                 </div> 
             </div>
         </div>

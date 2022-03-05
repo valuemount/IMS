@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { GroupshareRoutingModule } from './groupshare-routing.module';
 import { GroupshareComponent } from './groupshare/groupshare.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -11,7 +13,10 @@ import { GroupshareComponent } from './groupshare/groupshare.component';
   ],
   imports: [
     CommonModule,
-    GroupshareRoutingModule
+    GroupshareRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ]
   
 })
