@@ -8,6 +8,7 @@ import { DummyDashboardComponent } from './dummy/dummy-dashboard/dummy-dashboard
 import { DummyFormComponent } from './dummy/dummy-form/dummy-form.component';
 import { DummyAuthenticationComponent } from './dummy/dummy-authentication/dummy-authentication.component';
 import { SharedModule } from './modules/shared/shared.module';
+import { GroupshareModule } from './modules/groupshare/groupshare.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SharedModule } from './modules/shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

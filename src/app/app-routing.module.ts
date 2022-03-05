@@ -14,6 +14,10 @@ const routes: Routes = [
   {path:'dummy-dashboard', component: DummyDashboardComponent },
   {path:'dummy-form', component: DummyFormComponent },
   {path:'dummy-auth', component: DummyAuthenticationComponent },
+  {
+    path: 'groupshare',
+    loadChildren: () => import('./modules/groupshare/groupshare.module').then(m => m.GroupshareModule)
+  }
 
 ];
 
