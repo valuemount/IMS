@@ -169,7 +169,7 @@ body {
     background-color: #fff;
     overflow-y: auto;
     border: 1px solid #f7f7f7;
-    height: calc(100% - 120px);
+    height: calc(100% - 140px);
 }
 
 .sideBar-body {
@@ -319,7 +319,7 @@ body {
     /*overflow-y: auto;*/
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .message {
@@ -330,7 +330,7 @@ body {
     overflow-y: auto;
     border: 1px solid #f7f7f7;
     /* height: calc(100% - 120px); */
-    height: 83%;
+    height: 80%;
     
 }
 
@@ -500,7 +500,7 @@ body {
         height: 100%;
     }
     .heading {
-        height: 70px;
+        height: 10%;
         background-color: #009688;
     }
     .fa-2x {
@@ -579,7 +579,7 @@ body {
         height: calc(100% - 140px);
     }
     .reply {
-        height: 70px;
+        height: 10%;
     }
     .reply-emojis {
         padding: 5px 0 !important;
