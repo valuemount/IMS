@@ -6,9 +6,11 @@ import { DummyFormComponent } from './dummy/dummy-form/dummy-form.component';
 import { DummyAuthenticationComponent } from './dummy/dummy-authentication/dummy-authentication.component';
 import { LoginComponent } from './modules/authentication/login/login.component';
 import { VerticalStepperComponent } from './modules/shared/components/vertical-stepper/vertical-stepper.component';
+import { InterviewComponent } from './modules/interview/components/interview/interview.component';
 
 const routes: Routes = [
 
+  {path:'interview',component:InterviewComponent},
   {path:'login',component:LoginComponent},
 
   
