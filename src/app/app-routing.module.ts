@@ -4,6 +4,7 @@ import { DummyDashboardComponent } from './dummy/dummy-dashboard/dummy-dashboard
 import { DummyChatComponent } from './dummy/dummy-chat/dummy-chat.component';
 import { DummyFormComponent } from './dummy/dummy-form/dummy-form.component';
 import { DummyAuthenticationComponent } from './dummy/dummy-authentication/dummy-authentication.component';
+import { VerticalStepperComponent } from './modules/shared/components/vertical-stepper/vertical-stepper.component';
 
 const routes: Routes = [
 
@@ -17,7 +18,8 @@ const routes: Routes = [
   {
     path: 'groupshare',
     loadChildren: () => import('./modules/groupshare/groupshare.module').then(m => m.GroupshareModule)
-  }
+  },
+  {path:'dummy-stepper', component: VerticalStepperComponent}
 
 ];
 
