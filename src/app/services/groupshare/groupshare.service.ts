@@ -12,6 +12,7 @@ export class GroupshareService {
   {
     return this.httpclient.get("https://6222413b666291106a21d80b.mockapi.io/posts");
   }
+
   postmessage(message:any):Observable<any>
   {
     return this.httpclient.post("https://6222413b666291106a21d80b.mockapi.io/posts",message);
