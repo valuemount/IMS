@@ -8,6 +8,9 @@ import { DummyDashboardComponent } from './dummy/dummy-dashboard/dummy-dashboard
 import { DummyFormComponent } from './dummy/dummy-form/dummy-form.component';
 import { DummyAuthenticationComponent } from './dummy/dummy-authentication/dummy-authentication.component';
 import { SharedModule } from './modules/shared/shared.module';
+import { InterviewModule } from './modules/interview/interview.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +18,14 @@ import { SharedModule } from './modules/shared/shared.module';
     DummyChatComponent,
     DummyDashboardComponent,
     DummyFormComponent,
-    DummyAuthenticationComponent
+    DummyAuthenticationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    InterviewModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

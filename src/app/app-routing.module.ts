@@ -5,10 +5,11 @@ import { DummyChatComponent } from './dummy/dummy-chat/dummy-chat.component';
 import { DummyFormComponent } from './dummy/dummy-form/dummy-form.component';
 import { DummyAuthenticationComponent } from './dummy/dummy-authentication/dummy-authentication.component';
 import { VerticalStepperComponent } from './modules/shared/components/vertical-stepper/vertical-stepper.component';
+import { InterviewComponent } from './modules/interview/components/interview/interview.component';
 
 const routes: Routes = [
 
-  
+  {path:'interview',component:InterviewComponent},
 
   // Dummy paths
   {path:'dummy-chat', component: DummyChatComponent },

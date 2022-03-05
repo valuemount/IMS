@@ -8,12 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class VerticalStepperComponent implements OnInit {
 
-  @Input() data: any = [
-    {id:'1', question:'what', answer:'answer is'},
-    {id:'2', question:'what', answer:'answer is'},
-    {id:'3', question:'what', answer:'answer is'},
-    {id:'4', question:'what', answer:'answer is'}
-  ]
+  @Input() data: any = [];
 
   isLinear = false;
   firstFormGroup: FormGroup;

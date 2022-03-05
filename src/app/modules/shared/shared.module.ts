@@ -19,7 +19,8 @@ import { MatButtonModule} from '@angular/material/button';
     MatButtonModule
   ],
   exports:[
-    MadeByComponent
+    MadeByComponent,
+    VerticalStepperComponent
   ]
 })
 export class SharedModule { }
