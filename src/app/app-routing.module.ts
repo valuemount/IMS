@@ -4,6 +4,7 @@ import { DummyDashboardComponent } from './dummy/dummy-dashboard/dummy-dashboard
 import { DummyChatComponent } from './dummy/dummy-chat/dummy-chat.component';
 import { DummyFormComponent } from './dummy/dummy-form/dummy-form.component';
 import { DummyAuthenticationComponent } from './dummy/dummy-authentication/dummy-authentication.component';
+import { VerticalStepperComponent } from './modules/shared/components/vertical-stepper/vertical-stepper.component';
 
 const routes: Routes = [
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'dummy-dashboard', component: DummyDashboardComponent },
   {path:'dummy-form', component: DummyFormComponent },
   {path:'dummy-auth', component: DummyAuthenticationComponent },
+  {path:'dummy-stepper', component: VerticalStepperComponent}
 
 ];
 
