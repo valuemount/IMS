@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <!-- mdb bootstrap -->
+        <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+      
+        <!-- mdb javascript -->
+        <!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+$('.stepper').mdbStepper();
+})
+
+</script>
+      
+    </head>
+    <body>
+        <div class="container">
+<ul class="stepper linear">
+    <li class="step active">
+      <div data-step-label="Type something" class="step-title waves-effect waves-dark">Step 1</div>
+      <div class="step-new-content">
+        <div class="row">
+          <div class="md-form col-12 ml-auto">
+            <input id="email-linear" type="email" class="form-control validate" required>
+            <label for="email-linear">Your e-mail</label>
+          </div>
+        </div>
+        <div class="step-actions">
+          <button class="waves-effect waves-dark btn btn-sm btn-primary next-step">CONTINUE</button>
+        </div>
+      </div>
+    </li>
+    <li class="step">
+      <div class="step-title waves-effect waves-dark">Step 2</div>
+      <div class="step-new-content">
+        <div class="row">
+          <div class="md-form col-12 ml-auto">
+            <input id="password-linear" type="password" class="form-control validate" required>
+            <label for="password-linear">Your password</label>
+          </div>
+        </div>
+        <div class="step-actions">
+          <button class="waves-effect waves-dark btn btn-sm btn-primary next-step">CONTINUE</button>
+          <button class="waves-effect waves-dark btn btn-sm btn-secondary previous-step">BACK</button>
+        </div>
+      </div>
+    </li>
+    <li class="step">
+      <div class="step-title waves-effect waves-dark">Step 3</div>
+      <div class="step-new-content">
+        Finish!
+        <div class="step-actions">
+          <button class="waves-effect waves-dark btn btn-sm btn-primary m-0 mt-4" type="button">SUBMIT</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+  </div>
+  </body>
+ </html> 
+  
