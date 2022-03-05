@@ -4,6 +4,8 @@ import { DummyDashboardComponent } from './dummy/dummy-dashboard/dummy-dashboard
 import { DummyChatComponent } from './dummy/dummy-chat/dummy-chat.component';
 import { DummyFormComponent } from './dummy/dummy-form/dummy-form.component';
 import { DummyAuthenticationComponent } from './dummy/dummy-authentication/dummy-authentication.component';
+import { RegistrationComponent } from './modules/authentication/registration/registration.component';
+import { CreateinterviewComponent } from './modules/interview/components/createinterview/createinterview.component';
 import { LoginComponent } from './modules/authentication/login/login.component';
 import { VerticalStepperComponent } from './modules/shared/components/vertical-stepper/vertical-stepper.component';
 import { InterviewComponent } from './modules/interview/components/interview/interview.component';
@@ -20,6 +22,8 @@ const routes: Routes = [
   {path:'dummy-dashboard', component: DummyDashboardComponent },
   {path:'dummy-form', component: DummyFormComponent },
   {path:'dummy-auth', component: DummyAuthenticationComponent },
+  {path:'registration',component:RegistrationComponent},
+  {path:'createinterview',component:CreateinterviewComponent},
   {path:'dummy-stepper', component: VerticalStepperComponent}
 
 
