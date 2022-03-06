@@ -1,0 +1,27 @@
+<!-- <p>createinterview works!</p> -->
+
+<form [formGroup]="interviewForm"  >
+    <div class="form-group">
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Level
+            </button><br>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item">Moderate</a>
+                    <a class="dropdown-item">Difficult</a>
+                </div>
+        </div>
+        <ol>             
+            <li>
+                <label>Question</label>
+                <textarea class="form-control"rows="2" placeholder="Enter Question" formControlName="question"></textarea><br> 
+                <textarea class="form-control" rows="4" placeholder="Enter Answer" formControlName="answer"></textarea>       
+            </li>
+        </ol>
+    </div>    
+    <button type="submit" class="btn btn-primary" (click)="sub()">Submit</button>
+</form>
+
+        
+    
+

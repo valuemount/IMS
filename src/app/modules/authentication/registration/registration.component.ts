@@ -29,8 +29,7 @@ export class RegistrationComponent implements OnInit {
     (
       (value:any)=>
       {
-        alert("Saved SUccessfully");
-        // this.router.navigateByUrl("login")
+        alert("Saved SUccessfully");this.router.navigateByUrl("login")
         console.log(value);
         (error:any)=>
         {
@@ -39,7 +38,6 @@ export class RegistrationComponent implements OnInit {
       }
     )
   }
-
 
   ngOnInit(): void {
   }

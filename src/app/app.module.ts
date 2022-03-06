@@ -10,6 +10,7 @@ import { DummyAuthenticationComponent } from './dummy/dummy-authentication/dummy
 import { SharedModule } from './modules/shared/shared.module';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InterviewModule } from './modules/interview/interview.module';
 
 
 
@@ -29,6 +30,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AuthenticationModule,
     ReactiveFormsModule,
     FormsModule,
+    InterviewModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
