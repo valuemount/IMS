@@ -11,8 +11,9 @@ import { SharedModule } from './modules/shared/shared.module';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InterviewModule } from './modules/interview/interview.module';
-
-
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { Token } from '@angular/compiler';
+import { AuthInterceptor } from './services/authentication/login/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { InterviewModule } from './modules/interview/interview.module';
     DummyChatComponent,
     DummyDashboardComponent,
     DummyFormComponent,
-    DummyAuthenticationComponent
+    DummyAuthenticationComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,8 +32,16 @@ import { InterviewModule } from './modules/interview/interview.module';
     ReactiveFormsModule,
     FormsModule,
     InterviewModule,
+    
+    
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:AuthInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
