@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CreateInterviewService } from 'src/app/services/interview/create-interview.service';
 
@@ -7,36 +7,54 @@ import { CreateInterviewService } from 'src/app/services/interview/create-interv
   templateUrl: './createinterview.component.html',
   styleUrls: ['./createinterview.component.css']
 })
-export class CreateinterviewComponent implements OnInit {
+export class CreateinterviewComponent implements OnChanges, OnInit {
+
+  @Input() data: any = null;
+
+  public isEdit: boolean = false;
 
   constructor(private createinterviewservice:CreateInterviewService) { }
 
+  ngOnChanges(changes: SimpleChanges): void {
 
-  interviewForm:FormGroup=new FormGroup
-  ({
-    question:new FormControl(),
-    answer:new FormControl()
-  })
-
-  postcreateint=""
-  sub()
-  {
-   this.createinterviewservice.postcreateint(this.interviewForm.value).subscribe    
-  (
-    (value:any)=>   
-    {   
-     alert('success');
-    },
-
-    (error:any)=>
-    {
-      alert("error");
+    if(this.data){
+      this.isEdit = true;
+      this.interviewForm.addControl('id', new FormControl());
+      this.interviewForm.patchValue(this.data);
     }
-  )
+    else{
+      this.isEdit = false;
+      this.interviewForm.removeControl('id');
+      this.interviewForm.reset();
+    }
+    debugger;
+
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
 
+  }
 
+  interviewForm:FormGroup=new FormGroup(
+    {
+      section: new FormControl(),
+      subSection: new FormControl(),
+      level: new FormControl(),
+      question:new FormControl(),
+      answer:new FormControl()
+    }
+  )
+
+  sub()
+  {
+   this.createinterviewservice.postcreateint(this.interviewForm.value).subscribe(
+      (value:any)=>{   
+        alert('success');
+      },
+      (error:any)=>{
+          alert("error");
+      }
+    )
+  }
 
 }

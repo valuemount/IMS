@@ -1,5 +1,10 @@
+.stepper {
+    padding: 20px;
+}
+
 .mat-stepper-vertical {
-    margin-top: 8px;
+    margin-bottom: 20px;
+    /* border-left: 1px solid lightgray; */
 }
 
 .mat-form-field {

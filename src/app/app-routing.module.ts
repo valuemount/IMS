@@ -9,13 +9,18 @@ import { CreateinterviewComponent } from './modules/interview/components/createi
 import { LoginComponent } from './modules/authentication/login/login.component';
 import { VerticalStepperComponent } from './modules/shared/components/vertical-stepper/vertical-stepper.component';
 import { InterviewComponent } from './modules/interview/components/interview/interview.component';
+import { DashboardComponent } from './modules/dashboard/components/dashboard/dashboard.component';
+import { InterviewsDashboardComponent } from './modules/interview/components/interviews-dashboard/interviews-dashboard.component';
 
 const routes: Routes = [
 
+  {path:'dashboard', component: DashboardComponent, children:[
+    {path:'interview-dashboard', component:InterviewsDashboardComponent },
+    {path:'explore', component:InterviewComponent},
+    {path:'', redirectTo:'interview-dashboard', pathMatch:'full'}
+  ]},
   {path:'interview',component:InterviewComponent},
   {path:'login',component:LoginComponent},
-
-  
 
   // Dummy paths
   {path:'dummy-chat', component: DummyChatComponent },

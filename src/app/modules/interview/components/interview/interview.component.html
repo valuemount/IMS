@@ -1,1 +1,51 @@
-<app-vertical-stepper [data]="iqs"></app-vertical-stepper>
+<div class="container-fluid">
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Explore HTML</h1>
+            <a id="createQuestionButton" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#myModal">
+                Create Question
+            </a>
+        </div>
+
+    </div>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link pointer" (click)="level='basic'" [ngClass]="{'active': level=='basic'}">Basics</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link pointer" (click)="level='advanced'" [ngClass]="{'active': level=='advanced'}">Advanced</a>
+        </li>
+    </ul>
+
+    <app-vertical-stepper [data]="iqs" (edit)="edit($event)"></app-vertical-stepper>
+
+</div>
+
+<!-- Model to create question -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">{{ !isEdit ? 'Create Question' : 'Edit Question' }} </h4>
+                <button type="button" class="close" data-dismiss="modal" (click)="modalClose()">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <app-createinterview [data]="editQuestion"></app-createinterview>
+            </div>
+
+            <!-- Modal footer -->
+            <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div> -->
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,176 @@
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">View</h1>
+    </div>
+
+    <div class="row">
+
+        <!-- HTML -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card each-card border-left-info shadow h-100 py-2" routerLink="../explore">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="h5 font-weight-bold text-info text-uppercase mb-1">
+                                HTML</div>
+                            <div class="text-xs text-muted mb-1">
+                                Tells the browser how to display the content</div>
+                            <!-- <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CSS -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card each-card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="h5 font-weight-bold text-info text-uppercase mb-1">
+                                CSS</div>
+                            <div class="text-xs text-muted mb-1">
+                                Applies styles and layout for HTML document</div>
+                            <!-- <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card each-card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="h5 font-weight-bold text-info text-uppercase mb-1">
+                                Bootstrap</div>
+                            <div class="text-xs text-muted mb-1">
+                                External CSS file made by twitter.</div>
+                            <!-- <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Functionality -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Functionality</h1>
+    </div>
+
+    <div class="row">
+
+        <!-- Tasks Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4" *ngFor="let topic of jsTopics">
+            <div class="card each-card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="h5 font-weight-bold text-success text-uppercase mb-1">
+                                {{ topic.title }}</div>
+                            <div class="text-xs text-muted mb-1">
+                                External CSS file made by twitter.</div>
+                            <!-- <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div> -->
+                        </div>
+                        <!-- <div class="col-auto">
+                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Framework -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Angular Framework</h1>
+    </div>
+
+    <div class="row">
+
+        <!-- Angular topics -->
+        <div class="col-xl-3 col-md-6 mb-4" *ngFor="let topic of angularTopics">
+            <div class="card each-card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="h5 font-weight-bold text-warning text-uppercase mb-1">
+                                {{ topic.title }}</div>
+                            <div class="text-xs text-muted mb-1">
+                                asdf{{ topic.description }}</div>
+                        </div>
+                        <!-- <div class="col-auto">
+                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Work Flow -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Work Flow</h1>
+    </div>
+
+    <div class="row">
+
+        <!-- Angular topics -->
+        <div class="col-xl-3 col-md-6 mb-4" *ngFor="let topic of workFlowTopics">
+            <div class="card each-card border-left-secondary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="h5 font-weight-bold text-secondary text-uppercase mb-1">
+                                {{ topic.title }}</div>
+                            <div class="text-xs text-muted mb-1">
+                                asdf{{ topic.description }}</div>
+                        </div>
+                        <!-- <div class="col-auto">
+                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Personal Introduction -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Personal Introduction</h1>
+    </div>
+
+    <div class="row">
+
+        <!-- Angular topics -->
+        <div class="col-xl-3 col-md-6 mb-4" *ngFor="let topic of introductionTopics">
+            <div class="card each-card border-left-secondary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="h5 font-weight-bold text-secondary text-uppercase mb-1">
+                                {{ topic.title }}</div>
+                            <div class="text-xs text-muted mb-1">
+                                asdf{{ topic.description }}</div>
+                        </div>
+                        <!-- <div class="col-auto">
+                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

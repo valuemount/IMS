@@ -5,12 +5,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateinterviewComponent } from './components/createinterview/createinterview.component';
 import { InterviewComponent } from './components/interview/interview.component';
 import { SharedModule } from '../shared/shared.module';
+import { InterviewsDashboardComponent } from './components/interviews-dashboard/interviews-dashboard.component';
 
 
 @NgModule({
   declarations: [
     CreateinterviewComponent,
     InterviewComponent,
+    InterviewsDashboardComponent,
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { SharedModule } from '../shared/shared.module';
   [
     CreateinterviewComponent,
     SharedModule,
-    InterviewComponent
+    InterviewComponent,
+    InterviewsDashboardComponent
   ],
   
 })

@@ -12,8 +12,9 @@ import { AuthenticationModule } from './modules/authentication/authentication.mo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InterviewModule } from './modules/interview/interview.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { Token } from '@angular/compiler';
 import { AuthInterceptor } from './services/authentication/login/auth.interceptor';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AuthInterceptor } from './services/authentication/login/auth.intercepto
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     HttpClientModule,
     AppRoutingModule,
     SharedModule,
@@ -32,8 +34,7 @@ import { AuthInterceptor } from './services/authentication/login/auth.intercepto
     ReactiveFormsModule,
     FormsModule,
     InterviewModule,
-    
-    
+    DashboardModule
   ],
   providers: [
     {

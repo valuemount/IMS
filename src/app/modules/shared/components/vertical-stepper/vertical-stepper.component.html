@@ -1,12 +1,12 @@
-<mat-vertical-stepper [linear]="isLinear" #stepper>
+<mat-vertical-stepper class="stepper" [linear]="isLinear" #stepper>
     <mat-step [stepControl]="firstFormGroup" *ngFor="let item of data; let i = index">
         <form [formGroup]="firstFormGroup">
-
             <ng-template matStepLabel>{{ item.question }}</ng-template>
             <p>{{ item.answer }}</p>
             <div>
                 <button *ngIf="i != 0" mat-button matStepperPrevious>Back</button>
                 <button *ngIf="i != data.length-1" mat-button matStepperNext>Next</button>
+                <button mat-button (click)="editQuestion(item)">Edit</button>
                 <button *ngIf="i == data.length-1" mat-button (click)="stepper.reset()">Go to first</button>
             </div>
         </form>

@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EventManager } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-vertical-stepper',
@@ -9,6 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class VerticalStepperComponent implements OnInit {
 
   @Input() data: any = [];
+  @Output() edit: EventEmitter<any> = new EventEmitter<any>();
 
   isLinear = false;
   firstFormGroup: FormGroup;
@@ -25,6 +27,10 @@ export class VerticalStepperComponent implements OnInit {
 
   ngOnInit() {
     
+  }
+
+  editQuestion(item:any){
+    this.edit.emit(item);
   }
 
 }
