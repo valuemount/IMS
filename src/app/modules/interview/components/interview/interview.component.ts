@@ -22,7 +22,8 @@ export class InterviewComponent implements OnInit {
                       this.iqs=value
                    },
       (error:any)=>{
-                      alert("error")
+                      alert("error");
+                      console.log(error);
                   }             
     )
    }

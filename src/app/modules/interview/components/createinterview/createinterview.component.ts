@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Editor, toDoc, Toolbar } from 'ngx-editor';
 import { CreateInterviewService } from 'src/app/services/interview/create-interview.service';
 
 @Component({
@@ -10,10 +11,25 @@ import { CreateInterviewService } from 'src/app/services/interview/create-interv
 export class CreateinterviewComponent implements OnChanges, OnInit {
 
   @Input() data: any = null;
-
   public isEdit: boolean = false;
 
-  constructor(private createinterviewservice:CreateInterviewService) { }
+  editor: Editor;
+  html:string = '';
+
+  toolbar: Toolbar = [
+    ['bold', 'italic'],
+    ['underline', 'strike'],
+    ['code', 'blockquote'],
+    ['ordered_list', 'bullet_list'],
+    [{ heading: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] }],
+    ['link', 'image'],
+    // ['text_color', 'background_color'],
+    // ['align_left', 'align_center', 'align_right', 'align_justify'],
+  ];
+
+  constructor(private createinterviewservice:CreateInterviewService) { 
+    this.editor = new Editor();
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
 
@@ -27,7 +43,6 @@ export class CreateinterviewComponent implements OnChanges, OnInit {
       this.interviewForm.removeControl('id');
       this.interviewForm.reset();
     }
-    debugger;
 
   }
 
@@ -47,14 +62,37 @@ export class CreateinterviewComponent implements OnChanges, OnInit {
 
   sub()
   {
-   this.createinterviewservice.postcreateint(this.interviewForm.value).subscribe(
-      (value:any)=>{   
-        alert('success');
-      },
-      (error:any)=>{
+    if(!this.isEdit){
+      this.createinterviewservice.createQuestion(this.interviewForm.value).subscribe(
+        (value:any)=>{   
+          alert('success');
+        },
+        (error:any)=>{
+            alert("error");
+        }
+      )
+    }
+    else{
+      console.log(this.interviewForm.value);
+      let form = this.interviewForm.value;
+      form.answer = toDoc(form.answer);
+      console.log(form);
+      this.createinterviewservice.updateQuestion(this.interviewForm.get('id')?.value, form).subscribe(
+        (value:any)=>{
+          alert("success");
+        },
+        (error:any)=>{
           alert("error");
-      }
-    )
+          console.log("error is",error);
+
+        }
+      )
+    }
+  }
+
+  // make sure to destory the editor
+  ngOnDestroy(): void {
+    this.editor.destroy();
   }
 
 }

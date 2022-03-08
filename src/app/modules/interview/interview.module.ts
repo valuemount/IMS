@@ -6,6 +6,7 @@ import { CreateinterviewComponent } from './components/createinterview/createint
 import { InterviewComponent } from './components/interview/interview.component';
 import { SharedModule } from '../shared/shared.module';
 import { InterviewsDashboardComponent } from './components/interviews-dashboard/interviews-dashboard.component';
+import { NgxEditorModule } from 'ngx-editor';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { InterviewsDashboardComponent } from './components/interviews-dashboard/
     InterviewRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    NgxEditorModule
   ],
   exports:
   [

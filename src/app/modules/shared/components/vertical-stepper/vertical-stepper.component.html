@@ -2,7 +2,7 @@
     <mat-step [stepControl]="firstFormGroup" *ngFor="let item of data; let i = index">
         <form [formGroup]="firstFormGroup">
             <ng-template matStepLabel>{{ item.question }}</ng-template>
-            <p>{{ item.answer }}</p>
+            <div class="answer" [innerHTML]=transform(item.answer)></div>
             <div>
                 <button *ngIf="i != 0" mat-button matStepperPrevious>Back</button>
                 <button *ngIf="i != data.length-1" mat-button matStepperNext>Next</button>

@@ -9,8 +9,15 @@ export class CreateInterviewService {
 
   constructor(private httpclient:HttpClient) { }
 
-  postcreateint(createint:any):Observable<any>
+  createQuestion(question:any):Observable<any>
   {
-    return this.httpclient.post("https://6222413b666291106a21d80b.mockapi.io/qa-html",createint)
+    return this.httpclient.post("https://6222413b666291106a21d80b.mockapi.io/qa-html",question)
   }
+
+  updateQuestion(id:any, question:any):Observable<any>
+  {
+    return this.httpclient.put("https://6222413b666291106a21d80b.mockapi.io/qa-html/"+id,question);
+  }
+
+
 }

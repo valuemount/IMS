@@ -1,27 +1,31 @@
 <form [formGroup]="interviewForm">
     <div class="form-group">
 
-        <p *ngIf="!isEdit">Your question will be added in HTML section.</p>
+        <p *ngIf=" !isEdit ">Your question will be added in HTML section.</p>
 
-        <div class="form-group">
-            <label>Choose level: &nbsp;&nbsp;&nbsp;</label>
-            <div class="form-check-inline">
-                <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="optradio">Basic
-                </label>
-            </div>
-            <div class="form-check-inline">
-                <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="optradio">Advanced
-                </label>
-            </div>
+        <label>Choose level: &nbsp;&nbsp;&nbsp;</label>
+        <div class="form-check-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio">Basic
+            </label>
+        </div>
+        <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio">Advanced
+            </label>
         </div>
 
-        <textarea class="form-control" rows="5" placeholder="Enter Question" formControlName="question"></textarea><br>
-        <textarea class="form-control" rows="7" placeholder="Enter Answer" formControlName="answer"></textarea>
+        <textarea class="form-control " rows="3" placeholder="Enter Question " formControlName="question"></textarea><br>
+
+        <div class="NgxEditor__Wrapper ">
+            <ngx-editor-menu [editor]="editor " [toolbar]="toolbar"> </ngx-editor-menu>
+            <ngx-editor [editor]="editor " formControlName="answer" [disabled]="false " [placeholder]=" 'Enter answer ...' "></ngx-editor>
+        </div>
+
+        <!-- <textarea class="form-control " rows="7 " placeholder="Enter Answer " formControlName="answer "></textarea> -->
 
     </div>
-    <div class="center">
-        <button type="submit" class="btn btn-primary" (click)="sub()">{{ !isEdit ? 'Create Question' : 'Edit Question' }}</button>
+    <div class="center ">
+        <button type="submit " class="btn btn-primary " (click)="sub() ">{{ !isEdit ? 'Create Question' : 'Edit Question' }}</button>
     </div>
 </form>

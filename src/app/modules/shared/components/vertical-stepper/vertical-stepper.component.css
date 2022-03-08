@@ -14,3 +14,8 @@
 ::ng-deep .mat-step-header .mat-step-icon {
     background-color: #4e73df;
 }
+
+.answer {
+    color: black;
+    margin-top: 10px;
+}
