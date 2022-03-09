@@ -15,6 +15,11 @@ const routes: Routes = [
   {path:'dummy-form', component: DummyFormComponent },
   {path:'dummy-auth', component: DummyAuthenticationComponent },
 
+  {
+    path: 'details',
+    loadChildren: () => import('./modules/details/details.module').then(m => m.DetailsModule)
+  }
+
 ];
 
 @NgModule({

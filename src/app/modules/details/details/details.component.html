@@ -1,0 +1,237 @@
+<p>details works!</p>
+ <div class="row">
+    <!-- <div class="col-xl-4"> --> 
+        <!-- Profile picture card-->
+        <!-- <div class="card mb-4 mb-xl-0">
+            <div class="card-header">Profile Picture</div>
+            <div class="card-body text-center"> -->
+                <!-- Profile picture image-->
+                <!-- <img class="img-account-profile rounded-circle mb-2" src="/assets/assets/img/illustrations/profiles/profile-1.png" alt=""> -->
+                <!-- Profile picture help block-->
+                <!-- <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div> -->
+                <!-- Profile picture upload button-->
+                <!-- <button class="btn btn-primary" type="button">Upload new image</button>
+            </div>
+        </div>
+    </div> -->
+    <div class="col-xl-8">
+        <!-- Account details card-->
+        <div class="card mb-4">
+            <div class="card-header">Account Details</div>
+            <div class="card-body">
+                <form [formGroup]="detailsform">
+                    <!-- Form Group (username)-->
+                    <div class="mb-3">
+                        <label class="small mb-1" for="inputUsername">Username (how your name will appear to other users on the site)</label>
+                        <input class="form-control" id="inputUsername" type="text" placeholder="Enter your username" value="username" formControlName="username">
+                    </div>
+                    <!-- Form Row-->
+                    <div class="row gx-3 mb-3">
+                        <!-- Form Group (first name)-->
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputFirstName">First name</label>
+                            <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" value="Valerie" formControlName="Fullname">
+                        </div>
+                        <!-- Form Group (last name)-->
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputLastName">Last name</label>
+                            <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" value="Luna" formControlName="Lastname">
+                        </div>
+                    </div>
+                   
+                   
+                    <!-- Form Group (email address)-->
+                    <div class="mb-3">
+                        <label class="small mb-1" for="inputEmailAddress">Email address</label>
+                        <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value="name@example.com" formControlName="emailadress">
+                    </div>
+                    <!-- Form Row-->
+                    <div class="row gx-3 mb-3">
+                        <!-- Form Group (phone number)-->
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputPhone">Phone number</label>
+                            <input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number" value="555-123-4567" formControlName="Phonenumber">
+                        </div>
+                        <!-- Form Group (birthday)-->
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputBirthday">Birthday</label>
+                            <input class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Enter your birthday" value="06/10/1988" formControlName="Birthday">
+                        </div>
+                        
+                    </div>
+
+                   
+                     <!-- Save changes button-->
+                    <button class="btn btn-primary" type="button" (click)="changes()">Save changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-8">
+        <!-- Account details card-->
+        <div class="card mb-4">
+            <div class="card-header">experience Details</div>
+            <div class="card-body">
+                <form [formGroup]="detailsform">
+                    <!-- Form Group (username)-->
+                    <div class="mb-3">
+                        <label class="small mb-1" for="inputUsername">course</label>
+                        <input class="form-control" id="inputUsername" type="text" placeholder="Enter your course" value="course" formControlName="course">
+                    
+                     </div>
+                     <div class="mb-3">
+                        <label class="small mb-1" for="inputUsername">years</label>
+                        <input class="form-control" id="years" type="text" placeholder="Enter your years" value="years" formControlName="years">
+                    
+                     </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-8">
+        <!-- Account details card-->
+        <div class="card mb-4">
+            <div class="card-header">organisation Details</div>
+            <div class="card-body">
+                <form [formGroup]="detailsform">
+
+                 <!-- Form Row        -->
+                 <div class="mb-3">
+                    <label class="small mb-1" for="inputUsername">organisationname</label>
+                    <input class="form-control" id="organisationname" type="text" placeholder="Enter your organisationname"  formControlName="organisationname">
+                
+                 </div>
+                 <div class="mb-3">
+                    <label class="small mb-1" for="inputUsername">location</label>
+                    <input class="form-control" id="location" type="text" placeholder="Enter your location" value="location" formControlName="location">
+                
+                 </div>
+                 <div class="mb-3">
+                    <label class="small mb-1" for="accountnumber">accountnumber</label>
+                    <input class="form-control" id="accountnumber" type="text" placeholder="Enter your accountnumber" value="accountnumber" formControlName="accountnumber">
+                
+                 </div>
+                 
+                </form>
+    
+            </div>
+        </div>
+
+    </div>
+        
+    <div class="col-xl-8">
+        <!-- school-details -->
+        <div class="card mb-4">
+            <div class="card-header">education Details</div>
+            <div class="card-body">
+                <form  >
+                    <!--  Form Group (school) -->
+                      
+                    <div class="mb-3">
+                        <label class="small mb-1" for="inputschool">school</label>
+                        <input class="form-control" id="inputschool" type="text" placeholder="Enter your school" value="school" formControlName="school">
+                    </div>
+
+                     <!-- Form Group (school-year)-->
+                     <div class="mb-3">
+                        <label class="small mb-1" for="year">year</label>
+                        <input class="form-control" id="year" type="text" placeholder="Enter your year" value="year" formControlName="year">
+                    </div>
+                    <!-- formGroup(school-percentage) -->
+
+                    <div class="mb-3">
+                        <label class="small mb-1" for="percentage">percentage</label>
+                        <input class="form-control" id="percentage" type="text" placeholder="Enter your percentage" value="percentage" formControlName="percentage">
+                    </div>
+                   
+                    
+                    <div class="form-check-inline row" class="mb-3" >
+                     <label>type:</label>
+                    
+                     <input type="radio" class="form-check-input" id="radio1" name="optradio" value="inter" formControlName="inter">
+                     <label class="form-check-label" for="radio1">inter</label>
+                     <br>
+
+                      
+                    </div>
+                        <!-- diploma -->
+                    <div class="form-check-inline">
+                        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="diploma" formControlName="diploma">
+                        <label class="form-check-label" for="radio2">diploma</label>
+                     
+                     <!-- student -year -->
+                     <label>year:</label>
+                     <input type="text" formControlName="year">
+                     <!-- student-percentage -->
+                     <label>percentage:</label>
+                     <input type="text" formControlName="percentage">       
+                    
+                 </div>
+                 <br>
+                    <!-- under-graduation-details -->
+                 <div class="form-check-inline" class="mb-3">
+                     <label>type:</label>
+                     <!-- degree -->
+                     <input type="radio" class="form-check-year" id="radio1" name="optradio" value="degree"  formControlName="degree">
+                     <label class="form-check-label" for="radio1">degree: </label>
+                     
+
+                      <!-- student -year
+                      <label>year:</label>
+                      <input type="text" formControlName="year">
+                      <!-- student-percentage -->
+                      <!-- <label>percentage:</label>
+                      <input type="text" formControlName="percentage"> --> 
+                    </div>
+                    <!-- engineering -->
+                    <div class="form-check-inline">
+                        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" formControlName="engineering">
+                     <label class="form-check-label" for="radio1">engineering:</label>
+                     
+                        <br>
+
+                      <!-- student -year -->
+                      <label>year:</label>
+                      
+                      <input type="text" formControlName="year">
+                      <!-- student-percentage -->
+                      <label>percentage:</label>
+                      <input type="text" formControlName="percentage">
+                    </div>
+   
+                </form>
+            
+            </div>
+        </div>
+    </div>  
+
+    <!-- education-gap-details -->
+   
+    <form formGroupName="educationform" class="col-xl-8">
+        <div formArrayName="cards" class="mb-3">
+            <div *ngFor="let card of educationGapDetailsArray.controls;let i=index">
+             <div formGroupName="{{i}}">
+
+                 <label>from:</label>
+                 <input type="text" formControlName="from">
+
+                 <label>to</label>
+                 <input type="text" formControlName="to">
+                 <label>reason:</label>
+                 <input type="text" formControlName="reason">
+                
+                 <button  (click)="addgap()"  class="btn btn-success"> add </button>
+                   
+                 <button  (click)="delete(i)"  class="btn btn-danger"> delete </button>  
+                   
+                   
+                </div>
+            </div>
+        </div>
+
+    </form>
+   
+  
+                   
+                   
+</div>
