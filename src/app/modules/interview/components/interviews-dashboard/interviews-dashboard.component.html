@@ -97,7 +97,7 @@
     <div class="row">
 
         <!-- Angular topics -->
-        <div class="col-xl-3 col-md-6 mb-4" *ngFor="let topic of angularTopics">
+        <div class="col-xl-3 col-md-6 mb-4" *ngFor="let topic of angularTopics" (click)="navigate(topic)">
             <div class="card each-card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -105,7 +105,7 @@
                             <div class="h5 font-weight-bold text-warning text-uppercase mb-1">
                                 {{ topic.title }}</div>
                             <div class="text-xs text-muted mb-1">
-                                asdf{{ topic.description }}</div>
+                                {{ topic.description }}</div>
                         </div>
                         <!-- <div class="col-auto">
                             <i class="fas fa-comments fa-2x text-gray-300"></i>

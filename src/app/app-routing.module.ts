@@ -31,7 +31,6 @@ const routes: Routes = [
   {path:'createinterview',component:CreateinterviewComponent},
   {path:'dummy-stepper', component: VerticalStepperComponent}
 
-
 ];
 
 @NgModule({

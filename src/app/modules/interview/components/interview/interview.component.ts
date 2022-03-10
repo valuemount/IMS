@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component,  OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { InterviewService } from 'src/app/services/interview/interview ques/interview.service';
 
 @Component({
@@ -15,9 +15,20 @@ export class InterviewComponent implements OnInit {
    editQuestion = null;
    level: string = 'basic';
 
-  constructor(private interviewService:InterviewService, public location: Location) 
+   topic:string = '';
+
+  constructor(private interviewService:InterviewService, public location: Location, private activatedRoute:ActivatedRoute) 
   {
-    this.interviewService.getinterview().subscribe(
+
+    this.activatedRoute.queryParams.subscribe(
+      (params:any)=>{
+        this.topic = params.topic;
+        console.log(params)
+      }
+    )
+    
+
+    this.interviewService.getinterview(this.topic).subscribe(
       (value:any)=>{
                       this.iqs=value
                    },
@@ -26,9 +37,8 @@ export class InterviewComponent implements OnInit {
                       console.log(error);
                   }             
     )
-   }
 
-   
+  }
 
   ngOnInit() {
     

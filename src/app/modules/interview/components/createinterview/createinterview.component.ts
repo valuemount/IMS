@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { Editor, toDoc, Toolbar } from 'ngx-editor';
 import { CreateInterviewService } from 'src/app/services/interview/create-interview.service';
 
@@ -15,6 +16,7 @@ export class CreateinterviewComponent implements OnChanges, OnInit {
 
   editor: Editor;
   html:string = '';
+  topic:string = '';
 
   toolbar: Toolbar = [
     ['bold', 'italic'],
@@ -27,7 +29,14 @@ export class CreateinterviewComponent implements OnChanges, OnInit {
     // ['align_left', 'align_center', 'align_right', 'align_justify'],
   ];
 
-  constructor(private createinterviewservice:CreateInterviewService) { 
+  constructor(private createinterviewservice:CreateInterviewService, private activatedRoute:ActivatedRoute) { 
+
+    this.activatedRoute.queryParams.subscribe(
+      (data:any)=>{
+        this.topic = data.topic;
+      }
+    )
+
     this.editor = new Editor();
   }
 
@@ -63,7 +72,7 @@ export class CreateinterviewComponent implements OnChanges, OnInit {
   sub()
   {
     if(!this.isEdit){
-      this.createinterviewservice.createQuestion(this.interviewForm.value).subscribe(
+      this.createinterviewservice.createQuestion(this.interviewForm.value, this.topic).subscribe(
         (value:any)=>{   
           alert('success');
         },
@@ -77,7 +86,7 @@ export class CreateinterviewComponent implements OnChanges, OnInit {
       let form = this.interviewForm.value;
       form.answer = toDoc(form.answer);
       console.log(form);
-      this.createinterviewservice.updateQuestion(this.interviewForm.get('id')?.value, form).subscribe(
+      this.createinterviewservice.updateQuestion(this.interviewForm.get('id')?.value, form, this.topic).subscribe(
         (value:any)=>{
           alert("success");
         },
@@ -96,3 +105,5 @@ export class CreateinterviewComponent implements OnChanges, OnInit {
   }
 
 }
+
+

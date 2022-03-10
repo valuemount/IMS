@@ -10,16 +10,25 @@ export class InterviewService {
 
   constructor(private httpClient:HttpClient) { }
 
-  getinterview():Observable<any>
+  getinterview(topic:any):Observable<any>
   {
+    var url = '';
 
-    return this.httpClient.get("https://6222413b666291106a21d80b.mockapi.io/qa-html").pipe(
+    if(topic=='routing'){
+      url = "https://6222413b666291106a21d80b.mockapi.io/qa-routing";
+    }
+    else{
+      url = "https://6222413b666291106a21d80b.mockapi.io/qa-html";
+    }
+
+
+    return this.httpClient.get(url).pipe(
       map((value:any)=>{
        
         value.forEach((question:any)=>{
-          console.log(question.answer);
+          // console.log(question.answer);
           question.answer = toHTML(question.answer);
-          console.log(question.answer);
+          // console.log(question.answer);
         })
 
         return value;

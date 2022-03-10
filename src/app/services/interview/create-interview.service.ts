@@ -9,14 +9,28 @@ export class CreateInterviewService {
 
   constructor(private httpclient:HttpClient) { }
 
-  createQuestion(question:any):Observable<any>
-  {
-    return this.httpclient.post("https://6222413b666291106a21d80b.mockapi.io/qa-html",question)
+  getUrl(topic:any){
+    var url = '';
+
+    if(topic=='routing'){
+      url = "https://6222413b666291106a21d80b.mockapi.io/qa-routing";
+    }
+    else{
+      url = "https://6222413b666291106a21d80b.mockapi.io/qa-html";
+    }
+
+    return url;
+
   }
 
-  updateQuestion(id:any, question:any):Observable<any>
+  createQuestion(question:any, topic:string):Observable<any>
   {
-    return this.httpclient.put("https://6222413b666291106a21d80b.mockapi.io/qa-html/"+id,question);
+    return this.httpclient.post(this.getUrl(topic),question)
+  }
+
+  updateQuestion(id:any, question:any, topic:string):Observable<any>
+  {
+    return this.httpclient.put(this.getUrl(topic)+"/"+id,question);
   }
 
 

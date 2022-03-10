@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-interviews-dashboard',
@@ -115,9 +116,13 @@ export class InterviewsDashboardComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  navigate(item:any){
+    this.router.navigate(['/dashboard/explore'], { queryParams:{ topic: item.title }});
   }
 
 }
