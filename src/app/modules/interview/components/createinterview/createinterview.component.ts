@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
@@ -14,6 +15,8 @@ export class CreateinterviewComponent implements OnChanges, OnInit {
   @Input() data: any = null;
   public isEdit: boolean = false;
 
+  isSubmitDisabled: boolean = false;
+
   editor: Editor;
   html:string = '';
   topic:string = '';
@@ -29,7 +32,7 @@ export class CreateinterviewComponent implements OnChanges, OnInit {
     // ['align_left', 'align_center', 'align_right', 'align_justify'],
   ];
 
-  constructor(private createinterviewservice:CreateInterviewService, private activatedRoute:ActivatedRoute) { 
+  constructor(private createinterviewservice:CreateInterviewService, private activatedRoute:ActivatedRoute, private location: Location) { 
 
     this.activatedRoute.queryParams.subscribe(
       (data:any)=>{
@@ -71,10 +74,14 @@ export class CreateinterviewComponent implements OnChanges, OnInit {
 
   sub()
   {
+
+    this.isSubmitDisabled = true;
+    
     if(!this.isEdit){
       this.createinterviewservice.createQuestion(this.interviewForm.value, this.topic).subscribe(
         (value:any)=>{   
-          alert('success');
+          alert('Created Successfully');
+          window.location.reload();
         },
         (error:any)=>{
             alert("error");
@@ -88,7 +95,8 @@ export class CreateinterviewComponent implements OnChanges, OnInit {
       console.log(form);
       this.createinterviewservice.updateQuestion(this.interviewForm.get('id')?.value, form, this.topic).subscribe(
         (value:any)=>{
-          alert("success");
+          alert("Edited Successfully");
+          window.location.reload();
         },
         (error:any)=>{
           alert("error");

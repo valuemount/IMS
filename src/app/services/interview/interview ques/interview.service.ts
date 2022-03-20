@@ -17,6 +17,9 @@ export class InterviewService {
     if(topic=='routing'){
       url = "https://6222413b666291106a21d80b.mockapi.io/qa-routing";
     }
+    else if(topic =='Forms'){
+      url = "https://622f67863ff58f023c1fa464.mockapi.io/qa-forms";
+    }
     else{
       url = "https://6222413b666291106a21d80b.mockapi.io/qa-html";
     }
@@ -26,14 +29,19 @@ export class InterviewService {
       map((value:any)=>{
        
         value.forEach((question:any)=>{
-          // console.log(question.answer);
-          question.answer = toHTML(question.answer);
+          console.log(question.answer);
+          if(question?.answer && question.answer != '<p></p>'){
+            
+            question.answer = toHTML(question.answer);
+            console.log(question.answer)
+          }
           // console.log(question.answer);
         })
 
         return value;
 
-      })
+      },
+      )
     )
 
   }

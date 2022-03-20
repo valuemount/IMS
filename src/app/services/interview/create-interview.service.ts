@@ -15,6 +15,9 @@ export class CreateInterviewService {
     if(topic=='routing'){
       url = "https://6222413b666291106a21d80b.mockapi.io/qa-routing";
     }
+    else if(topic =='Forms'){
+      url = "https://622f67863ff58f023c1fa464.mockapi.io/qa-forms";
+    }
     else{
       url = "https://6222413b666291106a21d80b.mockapi.io/qa-html";
     }

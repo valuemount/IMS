@@ -73,7 +73,7 @@ export class InterviewsDashboardComponent implements OnInit {
       path:''
     },
     {
-      title: 'Reactive forms',
+      title: 'Forms',
       description: '',
       path:''
     },
